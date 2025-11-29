@@ -77,6 +77,7 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Primary gradient orbs */}
         <motion.div
           className="absolute top-1/4 -left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl"
           animate={{
@@ -97,6 +98,70 @@ export const Hero = () => {
           }}
           transition={{
             duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+
+        {/* Additional gradient beams */}
+        <motion.div
+          className="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-to-br from-primary/15 to-[#2F54A3]/15 rounded-full blur-2xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-tl from-[#3A63D1]/20 to-primary/10 rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            x: [0, -40, 0],
+            y: [0, 40, 0],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/3 left-1/2 w-48 h-48 bg-gradient-to-r from-primary/15 via-[#3A63D1]/15 to-[#2F54A3]/10 rounded-full blur-2xl"
+          animate={{
+            scale: [1, 1.4, 1],
+            rotate: [0, 180, 360],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+
+        {/* Gradient lines/beams */}
+        <motion.div
+          className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-transparent via-primary/10 to-transparent"
+          animate={{
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute top-0 right-1/3 w-1 h-full bg-gradient-to-b from-transparent via-[#3A63D1]/10 to-transparent"
+          animate={{
+            opacity: [0.6, 0.3, 0.6],
+          }}
+          transition={{
+            duration: 8,
             repeat: Infinity,
             ease: "easeInOut",
           }}
@@ -130,12 +195,16 @@ export const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <span className="bg-gradient-to-r from-primary via-[#3A63D1] to-primary bg-clip-text text-transparent">
-                  {displayText}
-                  <span className="animate-pulse">|</span>
+                <span className="relative inline-block">
+                  <span className="bg-gradient-to-r from-primary via-[#3A63D1] via-[#2F54A3] to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+                    {displayText}
+                    <span className="animate-pulse">|</span>
+                  </span>
+                  {/* Gradient glow effect */}
+                  <span className="absolute inset-0 bg-gradient-to-r from-primary/30 via-[#3A63D1]/30 to-primary/30 blur-2xl opacity-50 -z-10" />
                 </span>
                 <br />
-                <span className="text-foreground">+ Creative</span>
+                <span className="text-foreground">+ Innovator</span>
               </motion.h1>
             </motion.div>
 

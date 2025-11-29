@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 import { useNavigate } from "@tanstack/react-router";
 
 const socialLinks = [
@@ -10,9 +10,9 @@ const socialLinks = [
     href: "https://linkedin.com/in/eyamahemmanuel",
   },
   {
-    name: "Twitter",
-    icon: Twitter,
-    href: "https://twitter.com/eyamahemmanuel",
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://instagram.com/eyamahemmanuel",
   },
   { name: "Email", icon: Mail, href: "mailto:contact@eyamahemmanuel.com" },
 ];
