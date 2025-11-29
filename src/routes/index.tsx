@@ -9,10 +9,12 @@ export const Route = createFileRoute("/")({
 
 function RouteComponent() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <Home />
+      <main className="flex-1">
+        <Home />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
