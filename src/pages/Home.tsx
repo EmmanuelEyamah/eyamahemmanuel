@@ -10,7 +10,7 @@ import {
 
 export const Home = () => {
   return (
-    <div className="pt-14 sm:pt-16">
+    <div className="pt-4 sm:pt-8">
       <section id="hero">
         <Hero />
       </section>
