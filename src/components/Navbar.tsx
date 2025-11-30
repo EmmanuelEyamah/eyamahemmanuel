@@ -7,10 +7,10 @@ import { useNavigate, useLocation } from "@tanstack/react-router";
 const navLinks = [
   { name: "Home", href: "#hero", type: "scroll" },
   { name: "Services", href: "#services", type: "scroll" },
-  { name: "Projects", href: "/projects", type: "link" },
+  { name: "Projects", href: "#projects", type: "scroll" },
   { name: "Experience", href: "#experience", type: "scroll" },
   { name: "Skills", href: "#skills", type: "scroll" },
-  { name: "Blogs", href: "/blogs", type: "link" },
+  { name: "Blogs", href: "#blogs", type: "link" },
   { name: "Contact", href: "#contact", type: "scroll" },
 ];
 
@@ -26,11 +26,6 @@ export const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Check current path for page routes
-      if (location.pathname === "/projects") {
-        setActiveSection("projects");
-        return;
-      }
       if (location.pathname === "/blogs") {
         setActiveSection("blogs");
         return;

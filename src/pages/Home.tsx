@@ -1,4 +1,5 @@
 import {
+  Blogs,
   ContactUs,
   Experience,
   Hero,
@@ -17,7 +18,7 @@ export const Home = () => {
       <section id="services">
         <Services />
       </section>
-      <section id="works">
+      <section id="projects">
         <Works />
       </section>
       <section id="experience">
@@ -31,6 +32,9 @@ export const Home = () => {
       </section>
       <section id="contact">
         <ContactUs />
+      </section>
+      <section id="blogs">
+        <Blogs />
       </section>
     </div>
   );
