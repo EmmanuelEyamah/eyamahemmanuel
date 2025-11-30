@@ -26,8 +26,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    value: "+234 XXX XXX XXXX",
-    href: "tel:+234XXXXXXXXXX",
+    value: "+234 8020 616 476",
+    href: "tel:+2348020616476",
     gradient: "from-emerald-500 to-teal-500",
   },
   {
@@ -123,7 +123,7 @@ export const ContactUs = () => {
       });
 
       setTimeout(() => setSubmitted(false), 3000);
-    } catch  {
+    } catch {
       toast.error("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
