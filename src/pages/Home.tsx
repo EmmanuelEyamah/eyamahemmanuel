@@ -1,5 +1,5 @@
 import {
-  Blogs,
+  AboutMe,
   ContactUs,
   Experience,
   Hero,
@@ -8,6 +8,7 @@ import {
   Testimonies,
   Works,
 } from "./Sections";
+import { CTA } from "./Sections/CTA";
 
 export const Home = () => {
   return (
@@ -21,6 +22,9 @@ export const Home = () => {
       <section id="projects">
         <Works />
       </section>
+      <section id="aboutme">
+        <AboutMe />
+      </section>
       <section id="experience">
         <Experience />
       </section>
@@ -33,8 +37,8 @@ export const Home = () => {
       <section id="contact">
         <ContactUs />
       </section>
-      <section id="blogs">
-        <Blogs />
+      <section id="">
+        <CTA />
       </section>
     </div>
   );

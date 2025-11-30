@@ -1,5 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Home } from "@/pages";
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -15,6 +17,8 @@ function RouteComponent() {
         <Home />
       </main>
       <Footer />
+      <WhatsAppButton />
+      <ScrollToTop />
     </div>
   );
 }

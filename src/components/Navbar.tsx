@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Projects", href: "#projects", type: "scroll" },
   { name: "Experience", href: "#experience", type: "scroll" },
   { name: "Skills", href: "#skills", type: "scroll" },
-  { name: "Blogs", href: "#blogs", type: "link" },
+  { name: "About", href: "#aboutme", type: "scroll" },
   { name: "Contact", href: "#contact", type: "scroll" },
 ];
 
@@ -25,11 +25,6 @@ export const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-
-      if (location.pathname === "/blogs") {
-        setActiveSection("blogs");
-        return;
-      }
 
       // Get all sections that can be scrolled to
       const sections = navLinks
