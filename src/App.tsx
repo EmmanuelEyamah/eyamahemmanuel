@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 import { NotFoundPage } from "./components/NotFoundPage";
 import { LoadingScreen } from "./components/LoadingScreen";
+import { useState, useEffect } from "react";
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -44,6 +45,21 @@ declare module "@tanstack/react-router" {
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate initial loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // Show loading screen for 2.5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <>
       <QueryClientProvider client={queryClient}>
@@ -64,8 +80,8 @@ function App() {
               icon: "🎉",
               style: {
                 background: "#f0fdf4",
-                color: "#c7985f",
-                border: "1px solid #c7985f",
+                color: "#4C7DFB",
+                border: "1px solid #4C7DFB",
               },
             },
             error: {
