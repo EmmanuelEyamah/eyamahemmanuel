@@ -15,10 +15,10 @@ const projects = [
     category: "LMS Platform",
     description:
       "Comprehensive Learning Management System revolutionizing native language education. Features multi-role registration for schools, tutors, and students with advanced tutor matching algorithms.",
-    image: "/assets/projects/igboclass.jpg",
+    image: "/assets/igboclass.png",
     link: "https://igboclass.com",
     github: "",
-    tech: ["React", "Node.js", "MongoDB", "WebRTC"],
+    tech: ["React", "Laravel", "MySQL", "ZoomApi"],
     gradient: "from-emerald-500 via-teal-500 to-cyan-500",
   },
   {
@@ -27,10 +27,10 @@ const projects = [
     category: "E-Commerce",
     description:
       "Premium health-focused e-commerce platform specializing in nutritious tigernut-based products. Features seamless shopping experience with integrated payment systems.",
-    image: "/assets/projects/rootmylk.jpg",
+    image: "/assets/rootmylk.png",
     link: "https://rootmylk.com",
     github: "",
-    tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+    tech: ["React", "Paystack", "MySQL", "Tailwind"],
     gradient: "from-orange-500 via-amber-500 to-yellow-500",
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     category: "EdTech Platform",
     description:
       "Revolutionary financial education platform teaching youth the art of professional trading with comprehensive courses and real-time market simulations.",
-    image: "/assets/projects/nikhil.jpg",
+    image: "/assets/nikhil.png",
     link: "https://nikhil-kohl.vercel.app",
     github: "",
     tech: ["Next.js", "TypeScript", "Chart.js", "Vercel"],
@@ -51,10 +51,10 @@ const projects = [
     category: "Wellness E-Commerce",
     description:
       "Empowering women's health through curated wellness products and expert guidance. Complete e-commerce solution with health tracking features.",
-    image: "/assets/projects/wellness.jpg",
-    link: "https://wellnesswithwinifried.com",
+    image: "/assets/wellness.png",
+    link: "https://winifredayeniwellness-rd.vercel.app/",
     github: "",
-    tech: ["React", "Node.js", "Stripe", "AWS"],
+    tech: ["React", "Laravel", "Paystack", "Tanstack"],
     gradient: "from-pink-500 via-rose-500 to-red-500",
   },
   {
@@ -63,10 +63,10 @@ const projects = [
     category: "Creator Platform",
     description:
       "Personal brand platform for digital content creator mastering YouTube algorithms. Features comprehensive courses on building profitable YouTube channels.",
-    image: "/assets/projects/joshua.jpg",
+    image: "/assets/joshua.png",
     link: "https://joshuayunusa.com",
     github: "",
-    tech: ["React", "Video.js", "Firebase", "Tailwind"],
+    tech: ["React", "Email Service", "MySQL", "Tailwind"],
     gradient: "from-red-500 via-orange-500 to-amber-500",
   },
   {
@@ -75,10 +75,10 @@ const projects = [
     category: "Competitive Marketplace",
     description:
       "Innovative competitive writing marketplace where creativity meets competition. Writers submit entries, community votes, and winners earn rewards.",
-    image: "/assets/projects/gosobo.jpg",
+    image: "/assets/gosobo.png",
     link: "https://gosobo.net",
     github: "",
-    tech: ["React", "Node.js", "WebSocket", "PostgreSQL"],
+    tech: ["React", "Paystack", "Laravel", "MySQL"],
     gradient: "from-violet-500 via-purple-500 to-fuchsia-500",
   },
 ];
@@ -345,7 +345,7 @@ const ProjectCard = ({
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold hover:bg-white hover:text-black transition-all duration-300 z-10 relative"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold  transition-all duration-300 z-10 relative"
               onClick={(e) => e.stopPropagation()}
             >
               <span>View Project</span>
@@ -357,7 +357,7 @@ const ProjectCard = ({
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 z-10 relative"
+                className="w-11 h-11 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white  transition-all duration-300 z-10 relative"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Github className="w-5 h-5" />

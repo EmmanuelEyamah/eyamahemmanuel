@@ -5,7 +5,6 @@ import {
   Rocket,
   Sparkles,
   MessageSquare,
-  Download,
   Calendar,
 } from "lucide-react";
 import { socialLinks } from "@/constants/socialLinks";
@@ -23,6 +22,19 @@ export const CTA = () => {
 
   const scrollToContact = () => {
     const element = document.getElementById("contact");
+    if (element) {
+      const offset = 70;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollToAbout = () => {
+    const element = document.getElementById("aboutme");
     if (element) {
       const offset = 70;
       const elementPosition = element.getBoundingClientRect().top;
@@ -160,16 +172,14 @@ export const CTA = () => {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </motion.button>
 
-                  <motion.a
-                    href="/resume.pdf"
-                    download
+                  <motion.button
+                    onClick={scrollToAbout}
                     className="group w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Download CV
-                    <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                  </motion.a>
+                    About Me
+                  </motion.button>
                 </motion.div>
 
                 {/* Stats */}

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  Download,
   Smartphone,
   Globe,
   LayoutDashboard,
@@ -63,6 +62,20 @@ export const Hero = () => {
 
   const scrollToContact = () => {
     const element = document.getElementById("contact");
+    if (element) {
+      const offset = 70;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollToAbout = () => {
+    const element = document.getElementById("aboutme");
     if (element) {
       const offset = 70;
       const elementPosition = element.getBoundingClientRect().top;
@@ -248,16 +261,14 @@ export const Hero = () => {
                   />
                 </motion.button>
 
-                <motion.a
-                  href="/resume.pdf"
-                  download
+                <motion.button
+                  onClick={scrollToAbout}
                   className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center gap-2"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Download CV
-                  <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                </motion.a>
+                  About Me
+                </motion.button>
               </motion.div>
 
               {/* Social Links */}
