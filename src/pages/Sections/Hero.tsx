@@ -343,7 +343,7 @@ export const Hero = () => {
 
                 {/* Floating Elements */}
                 <motion.div
-                  className="absolute z-20 -top-6 -right-6 w-24 h-24 bg-primary/20 rounded-2xl backdrop-blur-sm border border-primary/30 flex flex-col items-center justify-center shadow-lg"
+                  className="absolute z-20 -top-6 -right-6 w-24 h-24 bg-white dark:bg-[#1a1a1a] rounded-2xl backdrop-blur-xl border border-primary shadow-2xl shadow-primary/20 flex flex-col items-center justify-center"
                   animate={{
                     y: [0, -20, 0],
                     rotate: [0, 5, 0],
@@ -354,14 +354,16 @@ export const Hero = () => {
                     ease: "easeInOut",
                   }}
                 >
-                  <span className="text-2xl font-bold text-primary">5+</span>
-                  <span className="text-xs text-foreground/70 font-medium">
+                  <span className="text-3xl font-black bg-gradient-to-r from-primary to-[#3A63D1] bg-clip-text text-transparent">
+                    5+
+                  </span>
+                  <span className="text-xs text-foreground font-semibold">
                     Years
                   </span>
                 </motion.div>
 
                 <motion.div
-                  className="absolute z-20 -bottom-6 -left-6 w-28 h-28 bg-[#3A63D1]/20 rounded-2xl backdrop-blur-sm border border-[#3A63D1]/30 flex flex-col items-center justify-center shadow-lg"
+                  className="absolute z-20 -bottom-6 -left-6 w-28 h-28 bg-white dark:bg-[#1a1a1a] rounded-2xl backdrop-blur-xl border border-primary shadow-2xl shadow-primary/20 flex flex-col items-center justify-center"
                   animate={{
                     y: [0, 20, 0],
                     rotate: [0, -5, 0],
@@ -372,8 +374,10 @@ export const Hero = () => {
                     ease: "easeInOut",
                   }}
                 >
-                  <span className="text-2xl font-bold text-primary">50+</span>
-                  <span className="text-xs text-foreground/70 font-medium">
+                  <span className="text-3xl font-black bg-gradient-to-r from-primary to-[#3A63D1] bg-clip-text text-transparent">
+                    50+
+                  </span>
+                  <span className="text-xs text-foreground font-semibold">
                     Projects
                   </span>
                 </motion.div>

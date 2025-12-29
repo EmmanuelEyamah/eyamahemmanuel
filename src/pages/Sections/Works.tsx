@@ -23,7 +23,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "RootMyLK",
+    title: "RootMylk",
     category: "E-Commerce",
     description:
       "Premium health-focused e-commerce platform specializing in nutritious tigernut-based products. Features seamless shopping experience with integrated payment systems.",
@@ -269,7 +269,7 @@ const ProjectCard = ({
   return (
     <motion.div
       ref={cardRef}
-      className={`group relative ${fullWidth ? "min-h-[500px]" : "min-h-[600px]"} rounded-3xl overflow-hidden`}
+      className={`group relative ${fullWidth ? "min-h-[500px]" : "min-h-[600px]"} rounded-3xl overflow-hidden bg-white dark:bg-[#0A0A0A] border border-border hover:border-primary/50 transition-all duration-300`}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -278,78 +278,68 @@ const ProjectCard = ({
       onMouseLeave={() => setHoveredProject(null)}
       whileHover={{ y: -8 }}
     >
-      <motion.div className="absolute inset-0" style={{ y }}>
+      {/* Image Section - Responsive for mobile and desktop */}
+      <motion.div
+        className={`absolute inset-0 ${fullWidth ? "h-[65%] lg:h-[50%]" : "h-[60%] lg:h-[60%]"}`}
+        style={{ y }}
+      >
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80" />
+        <div
+          className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-30 mix-blend-overlay`}
         />
       </motion.div>
 
-      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70 group-hover:from-black/50 group-hover:to-black/50 transition-all duration-500" />
-      <div
-        className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-30 transition-all duration-500 mix-blend-overlay`}
-      />
+      <div className="absolute top-6 left-6 right-6 flex items-center justify-between z-20">
+        <span className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs sm:text-sm font-semibold">
+          {project.category}
+        </span>
+        <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-white/60" />
+      </div>
 
       <div
-        className={`relative h-full flex ${fullWidth ? "flex-row items-center" : "flex-col"} justify-between p-8 lg:p-10 ${fullWidth ? "gap-10" : ""}`}
+        className={`absolute inset-x-0 bottom-0 ${fullWidth ? "h-[48%] lg:h-[50%]" : "h-[43%] lg:h-[50%]"} bg-white dark:bg-[#0A0A0A] backdrop-blur-xl`}
       >
-        <div
-          className={
-            fullWidth ? "flex-1 space-y-6" : "flex items-center justify-between"
-          }
-        >
-          {fullWidth ? (
-            <div className="flex items-center gap-4">
-              <span className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold">
-                {project.category}
-              </span>
-              <Globe className="w-6 h-6 text-white/60" />
+        <div className="h-full flex flex-col justify-between p-5 sm:p-6 lg:p-10">
+          <div className="space-y-3 sm:space-y-4">
+            <h3
+              className={`${fullWidth ? "text-2xl sm:text-3xl lg:text-4xl" : "text-xl sm:text-2xl lg:text-3xl"} font-black text-foreground group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-[#3A63D1] group-hover:bg-clip-text transition-all duration-300`}
+            >
+              {project.title}
+            </h3>
+
+            <p
+              className={`text-muted-foreground ${fullWidth ? "text-sm sm:text-base lg:text-lg" : "text-xs sm:text-sm lg:text-base"} leading-relaxed`}
+            >
+              {project.description}
+            </p>
+
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
+              {project.tech.map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] sm:text-xs font-semibold"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
-          ) : (
-            <>
-              <span className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold">
-                {project.category}
-              </span>
-              <Globe className="w-6 h-6 text-white/60" />
-            </>
-          )}
-        </div>
-
-        <div className={fullWidth ? "flex-1 space-y-6" : ""}>
-          <h3
-            className={`${fullWidth ? "text-3xl lg:text-5xl" : "text-3xl lg:text-4xl"} font-black text-white ${!fullWidth && "mb-3"} group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 group-hover:bg-clip-text transition-all duration-300`}
-          >
-            {project.title}
-          </h3>
-
-          <p
-            className={`text-gray-300 ${fullWidth ? "text-lg" : "text-base lg:text-lg"} leading-relaxed mb-6`}
-          >
-            {project.description}
-          </p>
-
-          <div className="flex flex-wrap gap-2 mb-6">
-            {project.tech.map((tech, idx) => (
-              <span
-                key={idx}
-                className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-medium"
-              >
-                {tech}
-              </span>
-            ))}
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 mt-4">
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold  transition-all duration-300 z-10 relative"
+              className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-xl bg-gradient-to-r from-primary to-[#3A63D1] text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 z-10 relative text-xs sm:text-sm lg:text-base"
               onClick={(e) => e.stopPropagation()}
             >
               <span>View Project</span>
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </a>
 
             {project.github && (
@@ -357,18 +347,19 @@ const ProjectCard = ({
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white  transition-all duration-300 z-10 relative"
+                className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 z-10 relative"
                 onClick={(e) => e.stopPropagation()}
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             )}
           </div>
         </div>
       </div>
 
+      {/* Shine Effect */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
       </div>
     </motion.div>
   );

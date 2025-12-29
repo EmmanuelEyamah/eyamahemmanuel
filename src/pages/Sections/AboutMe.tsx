@@ -74,14 +74,6 @@ const strengths = [
   },
 ];
 
-const focusAreas = [
-  "Building scalable full-stack applications",
-  "Improving architecture skills with Next.js and Node.js",
-  "Enhancing user experience through smooth UI systems",
-  "Learning advanced deployment and performance techniques",
-  "Creating digital products that solve real problems",
-];
-
 export const AboutMe = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -369,55 +361,6 @@ export const AboutMe = () => {
                 </motion.div>
               );
             })}
-          </div>
-        </motion.div>
-
-        {/* Current Focus */}
-        <motion.div
-          className="relative p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-muted/50 to-muted border border-border overflow-hidden"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-[#3A63D1]/5" />
-          <div className="relative">
-            <div className="text-center mb-8">
-              <motion.div
-                className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <Target className="w-4 h-4 text-primary" />
-                <span className="text-primary text-sm font-semibold">
-                  Current Focus
-                </span>
-              </motion.div>
-              <h3 className="text-3xl lg:text-4xl font-black bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                What I'm Working On
-              </h3>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-              {focusAreas.map((area, index) => (
-                <motion.div
-                  key={area}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-background/50 border border-border hover:border-primary/50 transition-all"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ x: 4 }}
-                >
-                  <div className="flex-shrink-0 w-6 h-6 rounded-lg bg-gradient-to-br from-primary to-[#3A63D1] flex items-center justify-center mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-white" />
-                  </div>
-                  <p className="text-foreground font-medium">{area}</p>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>

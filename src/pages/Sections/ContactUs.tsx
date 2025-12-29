@@ -26,8 +26,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    value: "+234 8020 616 476",
-    href: "tel:+2348020616476",
+    value: "+234 807 194 3026",
+    href: "tel:+2348071943026",
     gradient: "from-emerald-500 to-teal-500",
   },
   {
@@ -103,28 +103,46 @@ export const ContactUs = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      // Here you would normally send the data to your backend
-      console.log("Form submitted:", formData);
-
-      setSubmitted(true);
-      toast.success("Message sent successfully! I'll get back to you soon.");
-
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
+      const response = await fetch("https://formspree.io/f/mvgepvqw", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+        }),
       });
 
-      setTimeout(() => setSubmitted(false), 3000);
-    } catch {
-      toast.error("Something went wrong. Please try again.");
+      if (response.ok) {
+        setSubmitted(true);
+        toast.success("Message sent successfully! I'll get back to you soon.", {
+          duration: 5000,
+          icon: "🎉",
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+
+        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast.error(
+        "Something went wrong. Please try again or email me directly."
+      );
     } finally {
       setIsSubmitting(false);
     }

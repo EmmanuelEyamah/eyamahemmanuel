@@ -1,6 +1,7 @@
 export * from "./ContactUs";
 export * from "./Experience";
 export * from "./Hero";
+export * from "./Passion";
 export * from "./Services";
 export * from "./Skills";
 export * from "./AboutMe";

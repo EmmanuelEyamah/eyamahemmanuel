@@ -18,53 +18,62 @@ import { useState, useRef } from "react";
 const services = [
   {
     id: 1,
-    title: "Web Application Development",
-    icon: Globe,
+    title: "Full-Stack Development",
+    icon: Code2,
     shortDescription:
-      "Transform your business with powerful, scalable web applications that deliver exceptional user experiences and drive real results.",
+      "End-to-end web application development using modern JavaScript technologies. From database to deployment, I build complete solutions that scale.",
     fullDescription:
-      "I specialize in building modern, enterprise-grade web applications that combine stunning design with robust functionality. Using cutting-edge technologies like React, Next.js, and TypeScript, I create solutions that are fast, secure, and built to scale with your business.",
+      "I specialize in building modern, full-stack web applications using React, Next.js, Node.js, and TypeScript. Whether it's a SaaS platform, e-commerce site, or custom business application, I handle everything from database architecture to polished user interfaces.",
     image: "/assets/web-dev.jpg",
-    gradient: "from-blue-500 via-purple-500 to-pink-500",
+    gradient: "from-blue-500 via-indigo-500 to-purple-500",
     features: [
-      "Single Page Applications (SPA)",
-      "Progressive Web Apps (PWA)",
-      "E-commerce Platforms",
-      "Admin Dashboards",
-      "Content Management Systems",
-      "Real-time Applications",
+      "React & Next.js Applications",
+      "Node.js & Express APIs",
+      "Database Design (PostgreSQL/MongoDB)",
+      "Authentication & Security",
+      "Payment Integration",
+      "Cloud Deployment (AWS/Vercel)",
     ],
     process: [
       {
-        step: "Discovery & Planning",
-        desc: "Understanding your goals and requirements",
+        step: "Requirements & Planning",
+        desc: "Understanding your business goals and technical needs",
       },
       {
-        step: "Design & Prototyping",
-        desc: "Creating wireframes and interactive prototypes",
+        step: "Architecture Design",
+        desc: "Planning scalable system structure",
       },
-      { step: "Development", desc: "Building with modern tech stack" },
-      { step: "Testing & QA", desc: "Rigorous testing for quality assurance" },
-      { step: "Deployment", desc: "Launching your application live" },
       {
-        step: "Support & Maintenance",
-        desc: "Ongoing updates and improvements",
+        step: "Full-Stack Development",
+        desc: "Building frontend, backend, and database",
+      },
+      {
+        step: "Testing & QA",
+        desc: "Ensuring quality and performance",
+      },
+      {
+        step: "Deployment & Launch",
+        desc: "Deploying to production",
+      },
+      {
+        step: "Support & Updates",
+        desc: "Ongoing maintenance and improvements",
       },
     ],
   },
   {
     id: 2,
-    title: "Mobile App Development",
+    title: "Mobile Development",
     icon: Smartphone,
     shortDescription:
-      "Reach your audience anywhere with beautifully crafted native-quality mobile apps for iOS and Android from a single codebase.",
+      "Cross-platform mobile apps using React Native. Build once, deploy to iOS and Android with native performance and user experience.",
     fullDescription:
-      "I build cross-platform mobile applications using React Native that deliver native-level performance and user experience. Your app will look and feel like it was built specifically for each platform, while you benefit from faster development and easier maintenance.",
+      "I build cross-platform mobile applications using React Native that deliver native-level performance. Your app will work seamlessly on both iOS and Android, with a single codebase that's easier to maintain and faster to develop.",
     image: "/assets/mobile-dev.jpg",
     gradient: "from-cyan-500 via-blue-500 to-indigo-500",
     features: [
       "iOS & Android Apps",
-      "Cross-Platform Development",
+      "React Native Development",
       "Native Performance",
       "Push Notifications",
       "Offline Functionality",
@@ -72,62 +81,74 @@ const services = [
     ],
     process: [
       {
-        step: "Strategy Session",
-        desc: "Defining app goals and target audience",
+        step: "Planning & Design",
+        desc: "Defining features and user experience",
       },
-      { step: "UX/UI Design", desc: "Creating intuitive mobile experiences" },
-      { step: "Development", desc: "Building with React Native" },
-      { step: "Testing", desc: "Device testing and bug fixing" },
       {
-        step: "App Store Submission",
+        step: "Mobile Development",
+        desc: "Building with React Native",
+      },
+      {
+        step: "API Integration",
+        desc: "Connecting to backend services",
+      },
+      {
+        step: "Testing",
+        desc: "Device testing and optimization",
+      },
+      {
+        step: "App Store Launch",
         desc: "Publishing to iOS and Android stores",
       },
       {
-        step: "Post-Launch Support",
-        desc: "Updates, monitoring, and optimization",
+        step: "Maintenance",
+        desc: "Updates and feature additions",
       },
     ],
   },
   {
     id: 3,
-    title: "Full-Stack Product Development",
-    icon: Code2,
+    title: "Data Optimization",
+    icon: Globe,
     shortDescription:
-      "From concept to launch, I build complete digital products with powerful backends, intuitive frontends, and everything in between.",
+      "Turning complex raw inputs into reliable, usable systems. I design pipelines that power insights and apply core CS principles for scale, speed, and stability.",
     fullDescription:
-      "I offer end-to-end product development services, handling everything from database architecture to user interface design. Whether you're launching an MVP or building a complex enterprise system, I create scalable solutions with Node.js, PostgreSQL/MongoDB, and modern cloud infrastructure.",
-    image: "/assets/fullstack-dev.jpg",
+      "Beyond handling data, I'm driven by the challenge of building efficient, scalable data systems. I design pipelines, optimize database performance, and implement algorithms that ensure your applications run fast and handle growth seamlessly.",
+    image: "/assets/data.jpg",
     gradient: "from-violet-500 via-purple-500 to-fuchsia-500",
     features: [
-      "RESTful & GraphQL APIs",
-      "Database Design & Optimization",
-      "Authentication & Authorization",
-      "Cloud Infrastructure Setup",
-      "CI/CD Pipeline",
-      "Performance Optimization",
+      "Data Structures & Algorithms",
+      "DBMS, OOP, OS Fundamentals",
+      "Data Pipelines, ETL, and Scalability",
+      "Query Optimization",
+      "Caching Strategies (Redis)",
+      "Performance Tuning",
     ],
     process: [
       {
-        step: "Requirements Analysis",
-        desc: "Deep dive into your business needs",
+        step: "System Analysis",
+        desc: "Identifying bottlenecks and inefficiencies",
       },
       {
-        step: "Architecture Design",
-        desc: "Planning scalable system architecture",
+        step: "Architecture Planning",
+        desc: "Designing optimized data flow",
       },
       {
-        step: "Backend Development",
-        desc: "Building robust APIs and databases",
+        step: "Implementation",
+        desc: "Building efficient pipelines and queries",
       },
       {
-        step: "Frontend Development",
-        desc: "Creating engaging user interfaces",
+        step: "Performance Testing",
+        desc: "Measuring improvements and benchmarks",
       },
       {
-        step: "Integration & Testing",
-        desc: "Connecting all pieces seamlessly",
+        step: "Optimization",
+        desc: "Fine-tuning for maximum efficiency",
       },
-      { step: "Deployment & Scaling", desc: "Launch and optimize for growth" },
+      {
+        step: "Monitoring",
+        desc: "Continuous performance tracking",
+      },
     ],
   },
 ];
@@ -409,58 +430,69 @@ const ServiceCard = ({
   return (
     <motion.div
       ref={cardRef}
-      className={`group relative h-full ${tall ? "min-h-[600px]" : large ? "min-h-[500px]" : "min-h-[450px]"} rounded-3xl overflow-hidden cursor-pointer`}
-      whileHover={{ scale: 1.02 }}
+      className={`group relative h-full ${tall ? "min-h-[600px]" : large ? "min-h-[550px]" : "min-h-[550px]"} rounded-3xl overflow-hidden cursor-pointer bg-white dark:bg-[#0A0A0A] border border-border hover:border-primary/50 transition-all duration-300`}
+      whileHover={{ y: -8 }}
       transition={{ duration: 0.4 }}
       onClick={() => setSelectedService(service)}
     >
-      <motion.div className="absolute inset-0" style={{ y }}>
+      <motion.div
+        className={`absolute inset-0 ${tall ? "h-[75%] lg:h-[80%]" : "h-[70%] lg:h-[55%]"}`}
+        style={{ y }}
+      >
         <img
           src={service.image}
           alt={service.title}
-          className="w-full h-full object-cover scale-110"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80" />
+        <div
+          className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-30 mix-blend-overlay`}
         />
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 group-hover:from-black/40 group-hover:to-black/40 transition-all duration-500" />
+
+      <motion.div
+        className={`absolute ${tall ? "top-[55%] lg:top-[68%]" : "top-[50%] lg:top-[42%]"} left-6 lg:left-8 z-20 w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center shadow-2xl`}
+        whileHover={{ rotate: 360, scale: 1.1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Icon className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
+      </motion.div>
+
       <div
-        className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-20 group-hover:opacity-30 transition-all duration-500 mix-blend-overlay`}
-      />
-      <div className="relative h-full flex flex-col justify-between p-8 lg:p-10">
-        <motion.div
-          className={`inline-flex w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} items-center justify-center shadow-2xl`}
-          whileHover={{ rotate: 360, scale: 1.1 }}
-          transition={{ duration: 0.6 }}
-        >
-          <Icon className="w-8 h-8 text-white" />
-        </motion.div>
-        <div>
-          <h3 className="text-3xl lg:text-4xl font-black text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 group-hover:bg-clip-text transition-all duration-300">
-            {service.title}
-          </h3>
-          <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            {service.shortDescription}
-          </p>
-          <div className="flex flex-wrap gap-2 mb-6">
-            {service.features.slice(0, 3).map((feature, idx) => (
-              <span
-                key={idx}
-                className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium"
-              >
-                {feature}
-              </span>
-            ))}
+        className={`absolute inset-x-0 bottom-0 ${tall ? "h-[38%] lg:h-[28%]" : "h-[43%] lg:h-[50%]"} bg-white dark:bg-[#0A0A0A] backdrop-blur-xl`}
+      >
+        <div className="h-full flex flex-col justify-end p-5 sm:p-6 lg:p-10 pt-16 lg:pt-12">
+          <div>
+            <h3 className="text-lg sm:text-xl lg:text-3xl font-black text-foreground mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-[#3A63D1] group-hover:bg-clip-text transition-all duration-300">
+              {service.title}
+            </h3>
+            <p className="text-muted-foreground text-xs sm:text-sm lg:text-base leading-relaxed mb-3 sm:mb-4">
+              {service.shortDescription}
+            </p>
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+              {service.features.slice(0, 3).map((feature, idx) => (
+                <span
+                  key={idx}
+                  className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] sm:text-xs font-semibold"
+                >
+                  {feature}
+                </span>
+              ))}
+            </div>
+            <motion.div
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-primary to-[#3A63D1] text-white font-bold shadow-lg group-hover:shadow-xl transition-all duration-300 text-xs sm:text-sm lg:text-base"
+              whileHover={{ x: 5 }}
+            >
+              <span>Explore Service</span>
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
+            </motion.div>
           </div>
-          <motion.div
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold group-hover:bg-white group-hover:text-black transition-all duration-300"
-            whileHover={{ x: 5 }}
-          >
-            <span>Explore Service</span>
-            <ArrowRight className="w-5 h-5" />
-          </motion.div>
         </div>
       </div>
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+      {/* Shine Effect */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
       </div>
     </motion.div>
   );

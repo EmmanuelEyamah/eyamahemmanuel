@@ -16,7 +16,7 @@ const experiences = [
     company: "Progfams Technology",
     role: "Full-Stack Developer",
     type: "Contract",
-    period: "May 2024 - November 2024",
+    period: "2024",
     location: "Remote",
     description:
       "Led end-to-end development of enterprise web applications, architecting scalable solutions from database design to polished user interfaces.",
@@ -35,7 +35,7 @@ const experiences = [
     company: "Teranuim Co",
     role: "Full-Stack Developer",
     type: "Full-time",
-    period: "March 2024 - November 2024",
+    period: "2024",
     location: "Remote",
     description:
       "Developed and maintained complex full-stack applications, integrating modern frontend frameworks with robust backend systems.",

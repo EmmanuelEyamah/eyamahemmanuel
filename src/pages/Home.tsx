@@ -5,7 +5,6 @@ import {
   Hero,
   Services,
   Skills,
-  Testimonies,
   Works,
 } from "./Sections";
 import { CTA } from "./Sections/CTA";
@@ -16,6 +15,9 @@ export const Home = () => {
       <section id="hero">
         <Hero />
       </section>
+      {/* <section id="passion">
+        <Passion />
+      </section> */}
       <section id="services">
         <Services />
       </section>
@@ -31,9 +33,9 @@ export const Home = () => {
       <section id="skills">
         <Skills />
       </section>
-      <section id="testimonies">
+      {/* <section id="testimonies">
         <Testimonies />
-      </section>
+      </section> */}
       <section id="contact">
         <ContactUs />
       </section>
