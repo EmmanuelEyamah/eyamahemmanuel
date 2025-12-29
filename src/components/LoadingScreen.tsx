@@ -32,7 +32,7 @@ export const LoadingScreen = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-8"
         >
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight">
             <span className="bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
               Eyamah
             </span>
